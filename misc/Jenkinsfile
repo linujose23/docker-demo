@@ -1,13 +1,4 @@
 node {
-        stage("Fix the permission issue") {
-
-            agent any
-
-            steps {
-                sh "sudo chown root:jenkins /run/docker.sock"
-            }
-
-        }
    def commit_id
    stage('Preparation') {
      checkout scm
